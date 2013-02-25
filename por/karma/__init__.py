@@ -8,6 +8,7 @@ def includeme(config):
 
     config.add_route('karmademo', '/karmademo.json')
     config.add_view('por.karma.karmademo', renderer='json', route_name='karmademo')
+    config.scan('por.karma.events')
 
 
 class KarmaRenderer(fields.TextFieldRenderer):
