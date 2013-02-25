@@ -18,7 +18,7 @@ class KarmaRenderer(fields.TextFieldRenderer):
         if not karma_url:
             return ''
         try:
-            karma = requests.get(karma_url, timeout=4)
+            karma = requests.get(karma_url, timeout=4, verify=False)
         except requests.exceptions.RequestException:
             return ''
         if karma.status_code != 200:
