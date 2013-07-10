@@ -22,7 +22,7 @@ setup(name='por.karma',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'setuptools',
+          'distribute',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
